@@ -23,18 +23,18 @@ int main(void)
 		}
 		else if (a % 3 == 0)
 		{
-			printf("%s", f);
+			printf("%s ", f);
 		}
 		else if (a % 5 == 0)
 		{
-			printf("%s", b);
+			printf("%s ", b);
 		}
 		else if ((a % 3 == 0) && (a % 5 == 0))
 		{
-			printf("%s", fb);
+			printf("%s ", fb);
 		}
 		else
-			printf("%d", a);
+			printf("%d ", a);
 	}
 	printf("\n");
 	return (0);
