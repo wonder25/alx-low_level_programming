@@ -7,6 +7,7 @@
  * 3 & 5 multiples print FizzBuzz instead of the number
  * Return: always 0 (success)
  */
+
 int main(void)
 {
 	int a;
