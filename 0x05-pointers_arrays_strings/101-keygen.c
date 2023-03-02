@@ -5,22 +5,31 @@
 /**
  * main - program that generates random valid
  * passwords for the program 101-crackme
- * Return: always 0(success)
+ *
+ * Return: Always 0 (Success)
  */
+int main(void)
+{
+	int pass[100];
+	int i, sum, n;
 
-#define PASSWORD_LENGTH 10
+	sum = 0;	
 
-int main() {
-    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=";
-    const size_t charset_size = sizeof(charset) - 1;
-    char password[PASSWORD_LENGTH + 1];
-    srand(time(NULL)); // Seed the random number generator
+	srand(time(NULL));
 
-    for (int i = 0; i < PASSWORD_LENGTH; i++) {
-        password[i] = charset[rand() % charset_size];
-    }
-    password[PASSWORD_LENGTH] = '\0';
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
 
-    printf("Generated password: %s\n", password);
-    return 0;
+	return (0);
 }
