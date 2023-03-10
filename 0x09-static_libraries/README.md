@@ -1,1 +1,1 @@
-## About Static Libraries
+## About Static Libraries.
