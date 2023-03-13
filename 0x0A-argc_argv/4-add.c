@@ -13,11 +13,11 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	int c;
 
-	for (c = 1; c < argc && *argv[c] != '\0'; c++)
+	for (c = 1; c < argc; c++)
 	{
-		if (*argv[c] < '0' || *argv[c] > '9')
+		if (argv[c] < '0' || argv[c] > '9')
 		{
-			printf("Error \n");
+			printf("Error\n");
 			return (1);
 		}
 
