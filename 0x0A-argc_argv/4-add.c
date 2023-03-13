@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	int c;
 
-	for (c = 1; c < argc; c++)
+	for (c = 1; c < argc && *argv[c] != '\0'; c++)
 	{
 		if (*argv[c] < '0' || *argv[c] > '9')
 		{
