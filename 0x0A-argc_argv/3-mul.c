@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int c, b;
+	int c, b, mul;
 
 	if (argc <= 2)
 	{
@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 
 	c = atoi(argv[1]);
 	b = atoi(argv[2]);
-	printf("%d \n", c * b);
+	mul = c * b;
+	printf("%d \n", mul);
 	return (0);
 }
