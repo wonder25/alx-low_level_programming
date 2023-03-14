@@ -3,7 +3,10 @@
 /**
  * create_array - creates an array of char
  * and initializes it with a specific char.
+ * @size: size of array
+ * @c: character to insert
  * Return: always 0.
+ * pointer to array if successful
  */
 
 char *create_array(unsigned int size, char c)
@@ -14,7 +17,7 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 		return (NULL);
 
-	ptr = (char*) malloc(size * sizeof(char));
+	ptr = malloc(size * sizeof(char));
 
 	if (ptr == NULL)
 	{
