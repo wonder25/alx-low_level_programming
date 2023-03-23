@@ -5,7 +5,7 @@
 
 /**
 * sum_them_all - return sum when given unknown amount of arguments
-* @n: integers to add
+* @n: integers to add.
 * Return: sum
 */
 
