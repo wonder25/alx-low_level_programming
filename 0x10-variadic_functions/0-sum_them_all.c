@@ -4,7 +4,6 @@
 /**
  * sum_them_all - sums up all func params
  * @n: number of parameters
- *
  * Return: 0 or sum of params
  */
 int sum_them_all(const unsigned int n, ...)
