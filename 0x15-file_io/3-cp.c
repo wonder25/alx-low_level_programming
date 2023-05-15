@@ -26,6 +26,24 @@ char *create_buffer(char *file)
 }
 
 /**
+ * close_file - closes file descriptors
+ * @fd: file descriptors
+ */
+
+void close_file(int fd)
+{
+	int c;
+
+	c = close(fd);
+
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+
+/**
  * main - copies file content to another file
  * @argc: no of arguments
  * @argv: array of pointers to args
@@ -76,23 +94,4 @@ int main(int argc, char *argv[])
 		close_file(dest);
 
 		return (0);
-}
-
-/**
- * close_file - closes file descriptors
- * @fd: file descriptors
- * Return: nothing
- */
-
-void close_file(int fd)
-{
-	int c;
-
-	c = close(fd);
-
-	if (c == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
 }
